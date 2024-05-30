@@ -1,3 +1,8 @@
 from django.shortcuts import render
 
-# Create your views here.
+from .models import Image
+
+
+def show_images(request):
+    images = Image.objects.all()
+    return render(request, 'gallery.html', {'images': images})

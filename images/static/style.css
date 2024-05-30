@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    /* grid-auto-rows: auto;
+    grid-auto-flow: dense; */
+    gap: 1rem;
+}
+
+.image-container img {
+    max-width: 100%;
+}
+
+figcaption {
+    font-size: 0.8rem;
+}

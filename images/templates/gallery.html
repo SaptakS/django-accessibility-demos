@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>List of Images</h1>
+<div class="image-container">
+{% for image in images %}
+  <figure>
+    <img src="{{ image.image.url }}">
+    {% if image.attribution %}
+    <figcaption>Credit: {{ image.attribution }}</figcaption>
+    {% endif %}
+  </figure>
+{% endfor %}
+</div>
+{% endblock %}
