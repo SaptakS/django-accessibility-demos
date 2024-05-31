@@ -4,7 +4,7 @@
 <article class="post-container">
   <h1>{{ title }}</h1>
   <figure>
-    <img src="{{ photo.image.url }}">
+    <img src="{{ photo.image.url }}" alt="{{ photo_desc }}">
     {% if image.attribution %}
     <figcaption>Credit: {{ image.attribution }}</figcaption>
     {% endif %}

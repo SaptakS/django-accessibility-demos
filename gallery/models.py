@@ -16,6 +16,9 @@ class Article(models.Model):
     title = models.CharField(max_length=200)
     body = models.TextField()
     photo = models.ForeignKey(Image, on_delete=models.SET_NULL, blank=True, null=True)
+    photo_description = models.TextField(
+        help_text="Used in alt attribute to describe image in context of the article."
+    )
 
 
 class SocialIcon(models.Model):
