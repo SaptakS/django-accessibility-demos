@@ -13,6 +13,10 @@ class Image(models.Model):
 
 
 class Article(models.Model):
+    LANG = [
+        ("en", "English"),
+        ("es", "Español"),
+    ]
     title = models.CharField(max_length=200)
     body = models.TextField()
     photo = models.ForeignKey(Image, on_delete=models.SET_NULL, blank=True, null=True)
@@ -24,6 +28,7 @@ class Article(models.Model):
         default=False,
         help_text="Is the image decorative in this context?",
     )
+    language = models.CharField(max_length=2, choices=LANG, default="en")
 
 
 class SocialIcon(models.Model):

@@ -15,6 +15,7 @@ def article(request, article_id):
         {
             'title': article.title,
             'body': article.body,
+            'language': article.language,
             'photo': article.photo,
             'photo_desc': article.photo_description,
             'is_photo_decorative': article.is_decorative,
@@ -30,6 +31,7 @@ def article_with_icon(request, article_id):
         {
             'title': article.title,
             'body': article.body,
+            'language': article.language,
             'photo': article.photo,
             'photo_desc': article.photo_description,
             'icons': icons,
