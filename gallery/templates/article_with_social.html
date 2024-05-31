@@ -16,7 +16,7 @@
   {% for icon in icons %}
     <li>
       <a href="{{ icon.link }}">
-        <img src="{{icon.icon.image.url}}" />
+        <img src="{{icon.icon.image.url}}" alt="{{ icon.linktext }}"/>
       </a>
     </li>
   {% endfor %}

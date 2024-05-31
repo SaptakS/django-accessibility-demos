@@ -29,3 +29,7 @@ class Article(models.Model):
 class SocialIcon(models.Model):
     icon = models.ForeignKey(Image, on_delete=models.CASCADE)
     link = models.URLField(max_length=50)
+    linktext = models.CharField(
+        max_length=100,
+        help_text="Name of the social media."
+    )
