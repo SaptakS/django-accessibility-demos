@@ -11,5 +11,10 @@ class Image(models.Model):
 
 class Article(models.Model):
     title = models.CharField(max_length=200)
-    body = models.CharField(max_length=200)
+    body = models.TextField()
     photo = models.ForeignKey(Image, on_delete=models.SET_NULL, blank=True, null=True)
+
+
+class SocialIcon(models.Model):
+    icon = models.ForeignKey(Image, on_delete=models.CASCADE)
+    link = models.URLField(max_length=50)

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<article class="post-container">
+  <h1>{{ title }}</h1>
+  <figure>
+    <img src="{{ photo.image.url }}">
+    {% if image.attribution %}
+    <figcaption>Credit: {{ image.attribution }}</figcaption>
+    {% endif %}
+  </figure>
+  <p>
+    {{ body }}
+  </p>
+  <ul class="social-icons">
+  {% for icon in icons %}
+    <li>
+      <a href="{{ icon.link }}">
+        <img src="{{icon.icon.image.url}}" />
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
+</article>
+{% endblock %}
