@@ -4,6 +4,9 @@ class Image(models.Model):
     title = models.CharField(max_length=200)
     image = models.ImageField(upload_to='uploads/')
     attribution = models.CharField(max_length=200, blank=True, null=True)
+    description = models.TextField(
+        help_text="Used in alt attribute to describe image."
+    )
 
     def __str__(self):
         return self.title

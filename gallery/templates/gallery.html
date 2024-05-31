@@ -5,7 +5,7 @@
 <div class="image-container">
 {% for image in images %}
   <figure>
-    <img src="{{ image.image.url }}">
+    <img src="{{ image.image.url }}" alt="{{ image.description }}">
     {% if image.attribution %}
     <figcaption>Credit: {{ image.attribution }}</figcaption>
     {% endif %}
