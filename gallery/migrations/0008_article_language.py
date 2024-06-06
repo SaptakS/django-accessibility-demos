@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("gallery", "0006_socialicon_linktext"),
+        ("gallery", "0007_socialicon_linktext"),
     ]
 
     operations = [
