@@ -17,6 +17,7 @@ def article(request, article_id):
             'body': article.body,
             'photo': article.photo,
             'photo_desc': article.photo_description,
+            'is_photo_decorative': article.is_decorative,
         }
     )
 

@@ -5,7 +5,7 @@ class Image(models.Model):
     image = models.ImageField(upload_to='uploads/')
     attribution = models.CharField(max_length=200, blank=True, null=True)
     description = models.TextField(
-        help_text="Used in alt attribute to describe image."
+        help_text="Used in alt attribute to describe image.",
     )
 
     def __str__(self):
@@ -17,7 +17,12 @@ class Article(models.Model):
     body = models.TextField()
     photo = models.ForeignKey(Image, on_delete=models.SET_NULL, blank=True, null=True)
     photo_description = models.TextField(
+        blank=True, null=True,
         help_text="Used in alt attribute to describe image in context of the article."
+    )
+    is_decorative = models.BooleanField(
+        default=False,
+        help_text="Is the image decorative in this context?",
     )
 
 
